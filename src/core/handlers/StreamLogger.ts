@@ -6,11 +6,11 @@ export default class StreamLogger {
 
 	processOutput(process: ChildProcessWithoutNullStreams) {
 		process.stdout.on('data', (data: any) => {
-			this.logger.log(data);
+			this.logger.log(data.toString());
 		});
 
 		process.stderr.on('data', (data: any) => {
-			this.logger.error(data);
+			this.logger.error(data.toString());
 		});
 
 		process.on('close', this.logger.end);

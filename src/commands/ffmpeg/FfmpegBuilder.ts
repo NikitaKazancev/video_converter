@@ -1,6 +1,6 @@
 export default class FfmpegBuilder {
 	private inputPath: string;
-	private args: string[];
+	private args: string[] = [];
 
 	constructor() {
 		this.args.push('-c:v', 'libx264');

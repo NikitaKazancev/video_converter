@@ -22,5 +22,3 @@ export abstract class CommandExecutor<Input> {
 		logger: IStreamLogger
 	): void;
 }
-
-spawn('ffmpeg');
